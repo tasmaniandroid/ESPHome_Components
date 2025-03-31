@@ -33,6 +33,7 @@ CONFIG_SCHEMA = cv.COMPONENT_SCHEMA.extend(
 
 
 async def to_code(config):
+    var = cg.new_Pvariable(config[CONF_ID], sck_pin, miso_pin, mosi_pin, csn_pin, gd0_pin)
 
     # cg.add is used to add a piece of code to the generated main.cpp
     #   transceiver->set_bandwidth(200);
