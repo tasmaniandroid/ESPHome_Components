@@ -37,4 +37,6 @@ async def to_code(config):
 
     # cg.add is used to add a piece of code to the generated main.cpp
     #   transceiver->set_bandwidth(200);
+    await cg.register_component(var, config)
+
     cg.add(var.use_irda_on(config[CONF_USE_IRDA_ON]))
