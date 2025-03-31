@@ -2,7 +2,10 @@
 
 import esphome.codegen as cg
 import esphome.config_validation as cv
-
+from esphome.const import (
+    CONF_ID,
+    CONF_FREQUENCY,
+)
 # Mark the component to depend on other components.
 # If the user hasn’t explicitly added these components in their configuration, a validation error will be generated.
 DEPENDENCIES = [ ]
