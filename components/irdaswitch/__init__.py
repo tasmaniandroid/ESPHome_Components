@@ -37,7 +37,7 @@ CONFIG_SCHEMA = cv.COMPONENT_SCHEMA.extend(
 
 async def to_code(config):
     var = cg.new_Pvariable(config[CONF_ID], use_irda_on)
-
+    use_irda_on = CONF_USE_IRDA_ON
     # cg.add is used to add a piece of code to the generated main.cpp
     #   transceiver->set_bandwidth(200);
     await cg.register_component(var, config)
